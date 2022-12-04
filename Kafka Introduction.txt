@@ -1,0 +1,42 @@
+> APACHE KAFKA: 
+
+- Apache Kafka is an open-source platform that ingests and processes streaming data in real-time. 
+- Streaming data is generated every second simultaneously by tens of thousands of data sources. This constant stream of records can be processed by a streaming platform like Kafka both sequentially and incrementally. 
+- Apache Kafka uses a Publish and Subscribe model to read and write streams of records.
+- Kafka is also described as a distributed messaging software and as with other message queues, Kafka reads and writes messages asynchronously.
+- However, unlike other messaging systems, Kafka has built-in partitioning, replication, higher throughput and is more fault-tolerant which make it ideal for high volume message processing. 
+
+> KAFKA USES:
+
+- Kafka Use Cases are many and found across industries like Financial Services, Manufacturing, Retailing, Gaming, Transportation & Logistics, Telecom etc.
+- Kafka is used wherever there is high-volume streaming data to be ingested and used for insights.
+- Kafka use cases include data integration, event streaming, data processing, developing business applications and microservices.
+- Kafka can be used in Cloud, Multi-cloud, Hybrid deployments.
+
+> KAFKA USE CASES:
+
+1.Tracking Website Activity - Kafka can be used to track user activity by building user activity tracking pipelines with real-time publish-subscribe feeds.
+
+2.Operational Metrics - Kafka can be used to report on operational metrics by usage in operational data pipelines. It can collect data from distributed applications to enable alerting and reporting for operational metrics, by creating centralized data feeds of data from operations.
+
+3.Aggregating Logs - Kafka collects logs from multiple services and makes them available in standard format to multiple consumers. Kafka supports low-latency processing and many data sources, which is great for distributed data consumption.
+
+4.Stream Processing - The real-time processing of streams of data when done continuously, simultaneously and in a sequence of records, is Kafka stream processing. Real-time stream processing means Kafka reads data from a Topic (Source), carries out some transformation or analysis and writes the outcome to another Topic (Sink) for applications and users to consume.
+
+> KAFKA WORKING: 
+
+Kafka is known as an event streaming platform since you can:
+
+- Publish i.e. write streams of events and Subscribe i.e. read streams of events, involving a constant data import and export from other applications.
+- Store event streams reliably for as long as you like.
+- Process event streams as they happen or later.
+
+> TRADITIONAL MESSAGING SYSTEM (TMS) Vs APACHE KAFKA:
+
+- Transient Message Persistance (once the records are read by the consumers, then the messages will be removed from the message broker. In the case of "Kafka", it stores the events based on retention time events are immutable (once the records are sent to kafka, then it cannot be altered).
+
+- In TMS, it is the broker's responsibility to keep track of consumed messages by the consumers and remove them from the broker when the messages are read. In Kafka, it's the responsibility of the consumer to keep track of consumed messages.
+
+- With TMS, it can target a specific consumer to read the message from the broker. In Kafka, any consumer who have access to the broker can read the message.
+
+- TMS does not follow the principles of distributed systems. But Kafka, is built on the core principles of distributed systems.

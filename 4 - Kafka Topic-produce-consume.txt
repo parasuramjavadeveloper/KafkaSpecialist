@@ -1,0 +1,50 @@
+Create a Topic to Store your Events [Kafka Topic]:
+
+Step 1: Open terminal and navigate to Kafka folder.
+
+Step 2: Enter the following command to create a topic
+
+.\bin\windows\kafka-topics.bat -- create --topic topic-name --bootstrap-server localhost:9092 
+(Port as of server.properties)
+
+Step 3: It will create a topic with name (ex: topic-name).
+
+
+Write Some Events into the Kafka Topic: 
+
+Step 1: Enter the following command to write to a topic
+
+.\bin\windows\kafka-console-producer.bat --topic topic-name --bootstrap-server localhost:9092
+
+Step 2: Write the Events into the topic
+
+> hello world
+> kafka topic event
+> I am kafka user
+
+[Ctrl+C] to exit writing events.
+
+> Terminate batch job (Y/N)? y
+
+
+Read the Events from the Kafka Topic:
+
+Step 1. Enter the following command to read the events from the topic
+
+.\bin\windows\kafka-console-consumer.bat --topic topic-name --from-beginning --bootstrap-server localhost:9092
+
+Step 2: It will show you the list of events
+
+hello world
+kafka topic event
+I am kafka user
+
+[Ctrl+C] to exit reading events.
+
+> Terminate batch job (Y/N)? y
+
+
+
+
+
+

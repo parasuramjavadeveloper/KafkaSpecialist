@@ -1,0 +1,28 @@
+[Consumer Offset]:
+
+Messages that's produced into the topic will have a Unique ID called "Offset".
+
+Consumers have three options to read:
+1. from-beginning -> Read messages from the beginning
+2. latest -> Read only the messages that's going to come after the Consumers spun up.
+3. specific offset -> Read the messages and the topic by passing a specific offset value from the consumer.
+
+Consumer Offset in general are stored in an internal topic called "__consumer_offsets". Consumer Offsets helps the consumer to re-read the messages that are produced when consumer was down.
+
+Consumer Offsets behaves like a bookmark for the consumer to start reading the messages from the point it left off.
+
+Step 1: Open any terminal, and navigate to Kafka folder and to /bin/windows. (for windows users)
+
+Step 2: Enter the following Command to check for the [__consumer_offset] in topic list
+
+kafka-topics.bat --bootstrap-server localhost:9092 --list
+
+__consumer_offets
+newtopic
+test-topic 
+
+Here, __consumer_offsets is the topic which was auto created by the broker and it is used to take care of maintaining the consumer offsets, whereas newtopic, test-topic are user created topics.
+
+
+
+

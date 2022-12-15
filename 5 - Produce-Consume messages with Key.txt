@@ -1,0 +1,30 @@
+Sending Kafka Messages with [Key and Value]:
+
+Kafka Message sent from the producer has two Properties:
+- Key (Optional)
+- Value
+
+
+Key is used to send all the "same key" messages into same Partition.
+
+Step 1: Open terminal(producer) and navigate to Kafka folder. Then go to bin/windows and create a topic with name test-topic.
+
+Step 2: Enter the following commands to write message with "Key".
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
+
+>A-Apple
+>A-Adam
+>A-Alpha
+>A-Angel
+
+Step 3: Open another terminal(consumer) and Enter the following commands to read the messages from the topic
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning -property "key.separator= - " --property "print.key=true"
+
+A - Apple
+A - Adam
+A - Alpha
+A - Angel
+
+Step 4: As we can see, all the messages are consumed in order with key value "A".

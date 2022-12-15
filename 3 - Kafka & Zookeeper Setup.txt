@@ -1,0 +1,37 @@
+Kafka Setup:
+
+Step 1: Go to "https://kafka.apache.org/downloads" and under Binary downloads select the recommended version to download.
+
+Step 2: After downloading, Unzip the file and place the folder in your Kafka Workspace directory.
+
+Step 3: Go to any terminal, and navigate to the Kafka folder.
+
+Step 4: Use the following commands, to ensure installation of all file
+
+1. ls - Shows the list of files in the directory/folder. ("dir" for windows).
+2. cd bin - navigates to bin directory.
+3. cd windows - navigates into windows directory.
+4. cd config - navigates config directory.
+
+Start Kafka Environment [Zookeeper]:
+
+Step 1: Open any terminal, and navigate to Kafka folder.
+
+Step 2: Enter the following command to setup Zookeeper
+
+ .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties (zookeeper-server-start.sh file for mac).
+
+Step 3: It will the start the zookeeper according to zookerper.properties file.
+
+Simultaneously, Start the Kafka Server. 
+
+Start Kafka Broker Service [Kafka Server]:
+
+Step 1: Open other terminal, and navigate to Kafka folder.
+
+Step 2: Enter the following command to start Kafka Server. 
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties (kafka-server-start.sh file for mac).
+
+Step 3: It will start the kafka server according to server.properties file.
+
